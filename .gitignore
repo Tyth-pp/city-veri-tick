@@ -1,0 +1,59 @@
+# ---- Java / Maven / Spring Boot (city-veri-tick) ----
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+logs/
+.mvn/timing.properties
+
+# Build tool metadata
+.project
+.classpath
+.settings/
+.factorypath
+.springBeans
+
+# ---- Frontend / Node / Vite (city-veri-tick-web) ----
+node_modules/
+dist/
+dist-ssr/
+.vite/
+coverage/
+*.local
+
+# ---- Environment & secrets ----
+.env
+.env.*
+!.env.example
+
+# Profile-specific configs often contain real credentials;
+# application.yml (with ${...} placeholders) stays committed.
+application-*.yml
+application-*.yaml
+application-*.properties
+
+# Keys / certificates / keystores
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crt
+*.cer
+
+# ---- IDE ----
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*.swo
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+Desktop.ini

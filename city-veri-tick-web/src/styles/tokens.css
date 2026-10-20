@@ -1,0 +1,19 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-soft: #eff6ff;
+  --page: #f8fafc;
+  --card: #ffffff;
+  --text: #111827;
+  --body: #334155;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --danger: #e5484d;
+  --danger-soft: #fff0f0;
+  --success: #0d9b70;
+  --success-soft: #e5f8f1;
+  --warning: #d97706;
+  --warning-soft: #fff5df;
+  --radius: 14px;
+  --shadow: 0 1px 3px rgba(15, 23, 42, .05), 0 1px 2px rgba(15, 23, 42, .04);
+}

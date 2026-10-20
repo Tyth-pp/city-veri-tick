@@ -1,0 +1,5 @@
+import { ref } from 'vue'
+import { defineStore } from 'pinia'
+import { orderApi } from '../api/order'
+import { useRemindersStore } from './reminders'
+export const useOrderStore = defineStore('order', () => { const selection = ref(null); const currentOrder = ref(null); const selectTicket = (value) => { selection.value = value }; const clearSelection = () => { selection.value = null }; async function createOrder(couponId = null) { currentOrder.value = await orderApi.create({...selection.value, couponId}); return currentOrder.value }; async function payOrder(id) { const reminders = useRemindersStore(), account = reminders.accountId; currentOrder.value = await orderApi.pay(id); if (account === reminders.accountId) reminders.confirmIssued(currentOrder.value); return currentOrder.value }; async function cancelOrder(id) { currentOrder.value = await orderApi.cancel(id); return currentOrder.value }; return { selection, currentOrder, selectTicket, clearSelection, createOrder, payOrder, cancelOrder } })
